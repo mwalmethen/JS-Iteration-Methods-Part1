@@ -9,16 +9,18 @@ Write code to perform the following tasks using the filter method:
 
 // Function that filters vlaues that are greater than or equal to 25
  function numberInArray1(numbers) { 
-    const filtered = numbers.filter(number => number >= 25);
-    return filtered; // return new filtered array 
+    const filter_number = numbers.filter(num => num >= 25); /* filtering the numbers that are >= to 25 I used the arrow method in this by 
+    background knowoledge and research in the weekend */ 
+    return filter_number; // return new filtered array 
 }
-console.log(numberInArray1([10, 13, 20, 25, 38, 35, 40])); // Calling function 
+console.log(numberInArray1([10, 13, 20, 25, 38, 35, 40])); // Calling function output should be [25, 38, 35, 40]
 
 
 // Function that filters values that are divisible by 5 
 function numberInArray2(numbers) {
-    const filtered = numbers.filter(number => number % 5 === 0);
-    return filtered; // return new filtered array
+    const filter_number = numbers.filter(num => num % 5 === 0); /* filtering the numbers that can be divided by 5 
+    output shoud be [10, 20, 25, 35, 40] */ 
+    return filter_number; // return new filtered array
 }
 console.log(numberInArray2([10, 13, 20, 25, 38, 35, 40]));  // Calling function 
 
@@ -35,16 +37,17 @@ Write code to perform the following tasks using the map method:
 
 // Function that takes the values in the array and squars them 
  function squaredInarray(numbers) {
-    const squared = numbers.map(number => number **2)
-    return squared;
+    const squared = numbers.map(num => num **2) /* Same as before but now with .map to find the squared of a number without 
+    effecting the length of the array */
+    return squared; // return new array output should be [100, 169, 400, 625, 1444, 1225, 1600]
 
 }
 console.log(squaredInarray([10, 13, 20, 25, 38, 35, 40])); // Calling function
 
 // Function that takes the values in the array and multiplied by 2
 function multiplyArray(numbers) {
-    const multiplied = numbers.map(number => number *2);
-    return multiplied;
+    const multiplied = numbers.map(num => num*2); // Same as before but this time we * by 2 
+    return multiplied; // return and output should be [20, 26, 40, 50, 76, 70, 80]
 }
 console.log(multiplyArray([10, 13, 20, 25, 38, 35, 40])); // Calling function
 
@@ -60,9 +63,10 @@ Combine the filter and map methods to perform the following tasks:
 ******************************************************************/
 // Function that filters numbers that are greater than or equal to 20 then squares them
  function squareMultiplyArray(numbers) {
-    let filtered = numbers.filter(number => number >= 20);
-    const squared = filtered.map(number => number **2);
-    return squared;
+    let filter_number = numbers.filter(num => num >= 20); // filtering the numbers that are >= 20
+    const squared = filter_number.map(num => num **2); /* Then using the map method to find the square value of each number 
+    in the filtered_number array */
+    return squared; // return output should be [400, 625, 1444, 1225, 1600]
 }
 console.log(squareMultiplyArray([10, 13, 20, 25, 38, 35, 40]));  // Calling function
 
@@ -70,8 +74,9 @@ console.log(squareMultiplyArray([10, 13, 20, 25, 38, 35, 40]));  // Calling func
 
 // Function that filters numbers that are divisible by 5 and then multiplies each by 3
 function divideMultiplyArray(numbers) {
-    let filtered = numbers.filter(number => number % 5 === 0);
-    const multiplied = filtered.map(number => number *3);
-    return multiplied;
+    let filter_number = numbers.filter(num => num % 5 === 0); // filtering the numbers that can be divided by 5
+    const multiplied = filter_number.map(num => num *3); /* Then using map method to multiply the filter_number array that 
+    we created by 3 */
+    return multiplied; // return output shoud be [30, 60, 75, 105, 120]
 }
 console.log(divideMultiplyArray([10, 13, 20, 25, 38, 35, 40]));  // Calling function
